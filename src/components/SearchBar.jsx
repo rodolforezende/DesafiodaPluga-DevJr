@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SearchBar = function ({ placeholder, callback, state }) {
+const SearchBar = function SearchBar({ placeholder, callback, state }) {
   return (
     <div>
       <input placeholder={placeholder} onChange={callback} value={state} />

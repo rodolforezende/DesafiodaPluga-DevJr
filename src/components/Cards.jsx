@@ -1,37 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Cards = function ({ tools }) {
-  const estilo = {
-    width: '300px',
-    height: '300px',
-  };
-  console.log(tools);
+const Cards = function Cards({
+  appId, name, color, icon, link, click,
+}) {
   return (
-    <div>
-      <h3>Ferramentas</h3>
-      {tools.map(({
-        app_id, name, color, icon, link,
-      }) => (
-        <div key={app_id}>
-          <img src={icon} alt={name} style={{ width: '300px', height: '300px', backgroundColor: color }} />
-          <h4>{`${name}`}</h4>
-
+    <button type="button" onClick={click}>
+      <div
+        key={appId}
+        style={{
+          width: '200px', marginTop: '30px',
+        }}
+      >
+        <div style={{ backgroundColor: `${color}`, borderRadius: '100%' }}>
+          <img src={icon} alt={name} />
         </div>
-      ))}
-
-    </div>
+        <div>
+          <a href={link}>{name}</a>
+        </div>
+      </div>
+    </button>
   );
 };
 
 export default Cards;
 
 Cards.propTypes = {
-  tools: PropTypes.shape({
-    app_id: PropTypes.string,
-    name: PropTypes.string,
-    color: PropTypes.string,
-    icon: PropTypes.string,
-    link: PropTypes.string,
-  }).isRequired,
+  appId: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  click: PropTypes.func.isRequired,
 };
