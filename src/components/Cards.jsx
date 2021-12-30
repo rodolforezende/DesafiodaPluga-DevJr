@@ -2,12 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Cards = function Cards({
-  appId, name, color, icon, link, click,
+  name, color, icon, link, click,
 }) {
   return (
     <button type="button" onClick={click} data-testid="card">
       <div
-        key={appId}
         style={{
           width: '200px', marginTop: '30px',
         }}
@@ -26,7 +25,6 @@ const Cards = function Cards({
 export default Cards;
 
 Cards.propTypes = {
-  appId: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
