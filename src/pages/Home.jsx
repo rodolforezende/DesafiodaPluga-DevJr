@@ -16,8 +16,6 @@ const customStyles = {
   },
 };
 
-Modal.setAppElement('#root');
-
 const Home = function Home() {
   const [search, setSearch] = React.useState('');
   const [tools, setTools] = React.useState([]);
@@ -25,12 +23,10 @@ const Home = function Home() {
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [initial, setInitial] = React.useState(0);
   const [final, setFinal] = React.useState(11);
-  const [item, setItem] = React.useState({});
-  const [acess, setAcess] = React.useState([]);
 
   React.useEffect(() => {
     async function loadTools() {
-      const response = await api.get();
+      const response = await api();
       setTools(response.data);
       setFilter(response.data);
     }
@@ -58,22 +54,13 @@ const Home = function Home() {
   };
 
   function openModal(obj) {
-    setItem(obj);
-    const array = [];
-    const storage = JSON.parse(localStorage.getItem('tools'));
-    if (!storage) {
-      localStorage.setItem('tools', JSON.stringify(array));
-    }
+    const storage = JSON.parse(localStorage.getItem('tools')) || [];
     if (storage.length < 4) {
-      const takeback = JSON.parse(localStorage.getItem('tools'));
-      array.push(...takeback, obj);
-      localStorage.setItem('tools', JSON.stringify(array));
-      console.log(array);
+      const newItens = [obj, ...storage];
+      localStorage.setItem('tools', JSON.stringify(newItens));
     } else {
-      const takeback = JSON.parse(localStorage.getItem('tools'));
-      const newItens = takeback.slice(0, 1);
-      array.push(...newItens, obj);
-      localStorage.setItem('tools', JSON.stringify(array));
+      const newItens = [obj, ...storage.slice(0, 3)];
+      localStorage.setItem('tools', JSON.stringify(newItens));
     }
     setIsOpen(true);
   }
@@ -86,7 +73,7 @@ const Home = function Home() {
   };
 
   return (
-    <div>
+    <div id="root">
       <div>
         <SearchBar placeholder="Buscar Ferramenta" callback={handleChange} state={search} />
         {tools.length ? filter.filter((_value, index) => index >= initial && index <= final).map(({
@@ -109,7 +96,7 @@ const Home = function Home() {
           onRequestClose={() => closeModal()}
           style={customStyles}
         >
-          <ModalComponent item={item} acess={acess} />
+          <ModalComponent />
           <button type="button" onClick={closeModal}>close</button>
         </Modal>
         <button type="button" onClick={backPage} disabled={initial <= 0}>Back</button>

@@ -5,7 +5,7 @@ const Cards = function Cards({
   appId, name, color, icon, link, click,
 }) {
   return (
-    <button type="button" onClick={click}>
+    <button type="button" onClick={click} data-testid="card">
       <div
         key={appId}
         style={{
