@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const api = axios.create({
-  baseURL: 'https://pluga.co/ferramentas_search.json',
-});
+const baseURL = 'https://pluga.co/ferramentas_search.json';
+
+const api = () => axios.get(baseURL);
 
 export default api;
