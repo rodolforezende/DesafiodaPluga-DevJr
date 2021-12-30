@@ -1,4 +1,4 @@
-const response = JSON.stringify([
+const response = [
   {
     app_id: 'omie',
     name: 'Omie',
@@ -97,6 +97,6 @@ const response = JSON.stringify([
     icon: 'https://s3-sa-east-1.amazonaws.com/pluga.co/apps/icons/google_sheets/google_sheets-icon.svg',
     link: 'https://pluga.co/ferramentas/google_sheets/',
   },
-]);
+];
 
 module.exports = response;
