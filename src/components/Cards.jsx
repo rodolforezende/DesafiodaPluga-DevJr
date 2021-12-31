@@ -1,24 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../styles/cards.css';
 
 const Cards = function Cards({
   name, color, icon, link, click,
 }) {
   return (
-    <button type="button" onClick={click} data-testid="card">
-      <div
-        style={{
-          width: '200px', marginTop: '30px',
-        }}
-      >
-        <div style={{ backgroundColor: `${color}`, borderRadius: '100%' }}>
-          <img src={icon} alt={name} />
+    <div className="card-container">
+      <button className="card-element" type="button" onClick={click} data-testid="card">
+        <div className="card">
+          <div className="icon" style={{ backgroundColor: `${color}` }}>
+            <img src={icon} alt={name} />
+          </div>
+          <div>
+            <a className="link-name" href={link}>{name}</a>
+          </div>
         </div>
-        <div>
-          <a href={link}>{name}</a>
-        </div>
-      </div>
-    </button>
+      </button>
+    </div>
   );
 };
 

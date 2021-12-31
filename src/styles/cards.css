@@ -1,0 +1,43 @@
+@media (min-width: 360px) and (max-width: 785px) {
+  .card-container {
+    display: flex;
+  }
+  .card-element {
+    width: 150px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(155, 120, 112);
+  }
+  .link-name {
+    text-decoration: none;
+    color: #252525;
+    font-weight: 800;
+    font: helvetica;
+    font-size: 20px;
+  }
+  .icon {
+    border-radius: 100%;
+  }
+}
+
+@media (min-width: 786px) {
+  .card-container {
+    display: flex;
+  }
+  .card-element {
+    width: 300px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(155, 120, 112);
+  }
+  .link-name {
+    text-decoration: none;
+    color: #252525;
+    font-weight: 800;
+    font: helvetica;
+    font-size: 20px;
+  }
+  .icon {
+    border-radius: 100%;
+  }
+}

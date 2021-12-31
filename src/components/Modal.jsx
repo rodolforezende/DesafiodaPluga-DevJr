@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/modal.css';
 
 const Modal = function Modal() {
   const storage = JSON.parse(localStorage.getItem('tools'));
@@ -10,27 +11,33 @@ const Modal = function Modal() {
         if (index === 0) {
           return (
             <div>
-              <div style={{
-                backgroundColor: `${color}`, borderRadius: '100%', width: '200px', height: '200px',
-              }}
-              >
-                <img src={icon} alt={name} />
-              </div>
-              <div>
-                <h3>{name}</h3>
-                <a href={link}>Acessar</a>
+              <div className="main-modal">
+                <div
+                  className="main-tool-view"
+                  style={{
+                    backgroundColor: `${color}`,
+                  }}
+                >
+                  <img className="icon-main-tool" src={icon} alt={name} />
+                </div>
+                <div>
+                  <h3>{name}</h3>
+                  <a href={link}>Acessar</a>
+                </div>
               </div>
               <h4>ÚLTIMAS FERRAMENTAS VISUALIZADAS</h4>
             </div>
           );
         }
         return (
-          <div>
-            <div style={{ backgroundColor: `${color}`, borderRadius: '100%' }}>
-              <img src={icon} alt={name} />
-            </div>
-            <div>
-              <h3>{name}</h3>
+          <div className="tool-viewers">
+            <div className="main-tools-view">
+              <div className="tools-view" style={{ backgroundColor: `${color}` }}>
+                <img src={icon} alt={name} />
+              </div>
+              <div>
+                <h3>{name}</h3>
+              </div>
             </div>
           </div>
         );
