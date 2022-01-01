@@ -4,6 +4,7 @@ import SearchBar from '../components/SearchBar';
 import api from '../services/api';
 import Cards from '../components/Cards';
 import ModalComponent from '../components/Modal';
+import '../styles/home.css';
 
 const customStyles = {
   content: {
@@ -11,8 +12,9 @@ const customStyles = {
     left: '50%',
     right: 'auto',
     bottom: 'auto',
-    marginRight: '-50%',
+    margin: '0 auto',
     transform: 'translate(-50%, -50%)',
+    width: '40%',
   },
 };
 
@@ -76,20 +78,24 @@ const Home = function Home() {
     <div id="root">
       <div>
         <SearchBar placeholder="Buscar Ferramenta" callback={handleChange} state={search} />
-        {tools.length ? filter.filter((_value, index) => index >= initial && index <= final).map(({
-          app_id: appId, name, color, icon, link,
-        }) => (
-          <Cards
-            key={appId}
-            name={name}
-            color={color}
-            icon={icon}
-            link={link}
-            click={() => openModal({
-              appId, name, color, icon, link,
-            })}
-          />
-        )) : 'Loading'}
+        <div className="cards-container">
+          {tools.length ? filter
+            .filter((_value, index) => index >= initial && index <= final).map(({
+              app_id: appId, name, color, icon, link,
+            }) => (
+
+              <Cards
+                key={appId}
+                name={name}
+                color={color}
+                icon={icon}
+                link={link}
+                click={() => openModal({
+                  appId, name, color, icon, link,
+                })}
+              />
+            )) : 'Loading'}
+        </div>
         <Modal
           isOpen={modalIsOpen}
           onAfterOpen={() => afterOpenModal()}
@@ -97,10 +103,12 @@ const Home = function Home() {
           style={customStyles}
         >
           <ModalComponent />
-          <button type="button" onClick={closeModal}>close</button>
+          <button className="close-modal" type="button" onClick={closeModal}>close</button>
         </Modal>
-        <button type="button" onClick={backPage} disabled={initial <= 0}>Back</button>
-        <button type="button" onClick={nextPage} disabled={final > tools.length - 1}>Next</button>
+        <div className="buttons">
+          <button className="pagination-back" type="button" onClick={backPage} disabled={initial <= 0}><span>Back</span></button>
+          <button className="pagination-next" type="button" onClick={nextPage} disabled={final > tools.length - 1}><span>Next</span></button>
+        </div>
       </div>
     </div>
   );

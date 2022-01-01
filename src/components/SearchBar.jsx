@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../styles/searchBar.css';
 
 const SearchBar = function SearchBar({ placeholder, callback, state }) {
   return (
