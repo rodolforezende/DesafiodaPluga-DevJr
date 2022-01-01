@@ -499,6 +499,7 @@
     opacity: 1;
     right: 0;
   }
+
 }
 
 .modal {
@@ -519,4 +520,12 @@
   margin: 5px;
   margin-bottom: 10px;
   margin-top: 10px;
+}
+
+.pagination-back:disabled {
+  display: none;
+}
+
+.pagination-next:disabled {
+  display: none;
 }
