@@ -4,7 +4,7 @@ import '../styles/modal.css';
 const Modal = function Modal() {
   const storage = JSON.parse(localStorage.getItem('tools'));
   return (
-    <div>
+    <div className="modal">
       { storage.map(({
         name, icon, color, link,
       }, index) => {
@@ -22,7 +22,7 @@ const Modal = function Modal() {
                 </div>
                 <div>
                   <h3>{name}</h3>
-                  <a href={link}>Acessar</a>
+                  <button className="acess-link" type="button"><a href={link}>Acessar</a></button>
                 </div>
               </div>
               <h4>ÚLTIMAS FERRAMENTAS VISUALIZADAS</h4>

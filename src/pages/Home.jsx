@@ -12,8 +12,9 @@ const customStyles = {
     left: '50%',
     right: 'auto',
     bottom: 'auto',
-    marginRight: '-50%',
+    margin: '0 auto',
     transform: 'translate(-50%, -50%)',
+    width: '40%',
   },
 };
 
@@ -102,7 +103,7 @@ const Home = function Home() {
           style={customStyles}
         >
           <ModalComponent />
-          <button type="button" onClick={closeModal}>close</button>
+          <button className="close-modal" type="button" onClick={closeModal}>close</button>
         </Modal>
         <div className="buttons">
           <button className="pagination-back" type="button" onClick={backPage} disabled={initial <= 0}><span>Back</span></button>
