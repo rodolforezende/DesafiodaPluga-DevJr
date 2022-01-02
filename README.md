@@ -55,7 +55,7 @@ npm start
 Projeto para avaliação de legibilidade, responsabilidade individuais e expressidade dos nomes. 
 Foram feitos os testes da aplicação utilizando react-testing-library e jest, que podem ser verificados na pasta test da aplicação.
 
-Obrigado pela oportunidade Pluga!
+Obrigado pela oportunidade, Pluga!
 
 ## Contato
 
