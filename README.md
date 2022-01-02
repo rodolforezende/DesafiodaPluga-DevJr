@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Desafio Pluga
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Se trata de uma tela com uma listagem de cards representando os apps integrados na Pluga e uma barra de busca. Onde é feita uma consulta através da API (https://pluga.co/ferramentas_search.json), apresentando 12 ferramentas por página.
 
-## Available Scripts
 
-In the project directory, you can run:
+## 🛠️ Bibliotecas/Linguagens
+* [React](https://pt-br.reactjs.org/docs/getting-started.html) - React é uma biblioteca JavaScript para construção de interfaces de usuário. .
+* [eslint](https://eslint.org/) - ESLint é uma ferramenta de análise de código estática para identificar padrões problemáticos encontrados no código JavaScript.
+* [axios](https://axios-http.com/docs/intro) - Axios é um cliente HTTP baseado-em-promessas para o node. js e para o navegador.
+* [react-modal](https://www.npmjs.com/package/react-modal) - Componente de diálogo modal acessível para React.JS.
 
-### `npm start`
+## Proposta
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![wireframe1](https://user-images.githubusercontent.com/8314971/147878155-4a436152-d037-4eb5-88e6-15fa1de8c686.png)
+![wireframe2](https://user-images.githubusercontent.com/8314971/147878161-02e4f7b2-0f54-4370-8e61-b244f823de56.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## ⚙️ Como utilizar?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Siga os códigos abaixo 👇 
 
-### `npm run build`
+```
+git clone git@github.com:rodolforezende/DesafiodaPluga-DevJr.git
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Acesse o diretório clonado:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+cd DesafiodaPluga-DevJr
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Depois de feito o clone, abra o diretório onde foi clonado em seu terminal e digite o seguinte código:
 
-### `npm run eject`
+```
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Após completado as instalação das dependências, inicie o servidor com o seguinte comando em seu terminal:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm start
+```
+## Funcionamento em GIF:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Computador
+![Pluga](https://user-images.githubusercontent.com/8314971/147878476-a3dc3412-7488-485d-91c8-38c3df27f980.gif)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Mobile
+![Pluga - mobile](https://user-images.githubusercontent.com/8314971/147878478-656e916e-6410-4974-8ff4-719f1cc48d93.gif)
 
-## Learn More
+  
+## Conclusão
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Projeto para avaliação de legibilidade, responsabilidade individuais e expressidade dos nomes. 
+Foram feitos os testes da aplicação utilizando react-testing-library e jest, que podem ser verificados na pasta test da aplicação.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Obrigado pela oportunidade Pluga!
 
-### Code Splitting
+## Contato
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<a href="https://www.linkedin.com/in/rodolfo-rezende/">Linkedin</a> | <a href="mailto:rodolforrcont@gmail.com">Gmail</a>
