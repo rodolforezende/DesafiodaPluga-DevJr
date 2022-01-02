@@ -1,10 +1,10 @@
 # Desafio Pluga
 
-Se trata de uma tela com uma listagem de cards representando os apps integrados na Pluga e uma barra de busca. Onde é feita uma consulta através da API (https://pluga.co/ferramentas_search.json), apresentando 12 ferramentas por página.
+Trata-se de uma tela com uma listagem de cards representando os apps integrados na Pluga e uma barra de busca, onde é feita uma consulta, através da API (https://pluga.co/ferramentas_search.json), apresentando 12 ferramentas por página.
 
 
 ## 🛠️ Bibliotecas/Linguagens
-* [React](https://pt-br.reactjs.org/docs/getting-started.html) - React é uma biblioteca JavaScript para construção de interfaces de usuário. .
+* [React](https://pt-br.reactjs.org/docs/getting-started.html) - React é uma biblioteca JavaScript para construção de interfaces de usuário.
 * [eslint](https://eslint.org/) - ESLint é uma ferramenta de análise de código estática para identificar padrões problemáticos encontrados no código JavaScript.
 * [axios](https://axios-http.com/docs/intro) - Axios é um cliente HTTP baseado-em-promessas para o node. js e para o navegador.
 * [react-modal](https://www.npmjs.com/package/react-modal) - Componente de diálogo modal acessível para React.JS.
