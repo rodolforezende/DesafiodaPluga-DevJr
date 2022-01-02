@@ -43,11 +43,12 @@ npm start
 ## Funcionamento em GIF:
 
 - Computador
-![Pluga](https://user-images.githubusercontent.com/8314971/147878476-a3dc3412-7488-485d-91c8-38c3df27f980.gif)
+
+![Pluga](https://user-images.githubusercontent.com/8314971/147878724-726a3c64-cc55-46f3-ab7a-1c2cd5155d34.gif)
 
 - Mobile
-![Pluga - mobile](https://user-images.githubusercontent.com/8314971/147878478-656e916e-6410-4974-8ff4-719f1cc48d93.gif)
 
+![Pluga - mobile](https://user-images.githubusercontent.com/8314971/147878729-cf9ddb98-1925-451b-909f-af577167f9e1.gif)
   
 ## Conclusão
 
